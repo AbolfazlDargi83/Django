@@ -10,10 +10,13 @@ def json_test(request):
     return JsonResponse({'name':'Ali', 'age':20})
 
 def index_view(request):
-    return HttpResponse("<h1>This is index page</h1>")
+    return render(request,'index.html')
 
 def contact_view(request):
-    return HttpResponse("<h1>This is contact page</h1>")
+    return render(request,'contact.html')
 
 def about_view(request):
-    return HttpResponse("<h1>This is about page</h1>")
+    return render(request,'about.html')
+
+def web(request):
+    return render(request, 'panel/index.html')
